@@ -1,0 +1,31 @@
+type Student @model{
+    id: ID!
+    name: String!
+    courses: [Enrollment] @connection(keyName: "byStudent", fields: ["id"])
+}
+
+type Enrollment
+    @model(queries: null)
+    @key(name: "byStudent", fields: ["studentID", "courseID"])
+    @key(name: "byCourse", fields: ["courseID", "studentID"]){
+        id: ID!
+        studentID: ID!
+        courseID: ID!
+        student: Student! @connection(fields: ["studentID"])
+        course: Course! @connection(fields: ["courseID"])
+    }
+
+
+
+type Course @model{
+    id: ID!
+    name: String!
+    students: [Enrollment] @connection(keyName: "byCourse", fields: ["id"])
+    videos: [Video] @connection(name: "CourseVideos")
+}
+type Video @model{
+    id: ID!
+    name: String!
+    url: String!
+    course: Course! @connection(name: "CourseVideos")
+}

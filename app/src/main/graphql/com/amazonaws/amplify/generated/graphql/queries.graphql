@@ -1,0 +1,107 @@
+# this is an auto generated file. This will be overwritten
+query GetStudent($id: ID!) {
+  getStudent(id: $id) {
+    id
+    name
+    courses {
+      items {
+        id
+        studentID
+        courseID
+      }
+      nextToken
+    }
+  }
+}
+query ListStudents(
+  $filter: ModelStudentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listStudents(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      courses {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+query GetCourse($id: ID!) {
+  getCourse(id: $id) {
+    id
+    name
+    students {
+      items {
+        id
+        studentID
+        courseID
+      }
+      nextToken
+    }
+    videos {
+      items {
+        id
+        name
+        url
+      }
+      nextToken
+    }
+  }
+}
+query ListCourses(
+  $filter: ModelCourseFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCourses(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      students {
+        nextToken
+      }
+      videos {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+query GetVideo($id: ID!) {
+  getVideo(id: $id) {
+    id
+    name
+    url
+    course {
+      id
+      name
+      students {
+        nextToken
+      }
+      videos {
+        nextToken
+      }
+    }
+  }
+}
+query ListVideos(
+  $filter: ModelVideoFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listVideos(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      url
+      course {
+        id
+        name
+      }
+    }
+    nextToken
+  }
+}

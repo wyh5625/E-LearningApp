@@ -1,0 +1,2 @@
+include ':app', ':PlayVideo'
+rootProject.name='E-LearningApp'

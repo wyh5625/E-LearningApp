@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    style="@style/text_view_style"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_todo_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Test"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_todo_list_next_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_todo_list_title"
+        android:layout_alignLeft="@+id/tv_todo_list_title"
+        android:text="Test" />
+
+
+    <View
+        android:id="@+id/v_separater"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/tv_todo_list_deadline"
+        android:background="@color/grey" />
+
+</RelativeLayout>

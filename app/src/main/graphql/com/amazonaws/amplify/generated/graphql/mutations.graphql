@@ -1,0 +1,268 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateStudent(
+  $input: CreateStudentInput!
+  $condition: ModelStudentConditionInput
+) {
+  createStudent(input: $input, condition: $condition) {
+    id
+    name
+    courses {
+      items {
+        id
+        studentID
+        courseID
+      }
+      nextToken
+    }
+  }
+}
+mutation UpdateStudent(
+  $input: UpdateStudentInput!
+  $condition: ModelStudentConditionInput
+) {
+  updateStudent(input: $input, condition: $condition) {
+    id
+    name
+    courses {
+      items {
+        id
+        studentID
+        courseID
+      }
+      nextToken
+    }
+  }
+}
+mutation DeleteStudent(
+  $input: DeleteStudentInput!
+  $condition: ModelStudentConditionInput
+) {
+  deleteStudent(input: $input, condition: $condition) {
+    id
+    name
+    courses {
+      items {
+        id
+        studentID
+        courseID
+      }
+      nextToken
+    }
+  }
+}
+mutation CreateEnrollment(
+  $input: CreateEnrollmentInput!
+  $condition: ModelEnrollmentConditionInput
+) {
+  createEnrollment(input: $input, condition: $condition) {
+    id
+    studentID
+    courseID
+    student {
+      id
+      name
+      courses {
+        nextToken
+      }
+    }
+    course {
+      id
+      name
+      students {
+        nextToken
+      }
+      videos {
+        nextToken
+      }
+    }
+  }
+}
+mutation UpdateEnrollment(
+  $input: UpdateEnrollmentInput!
+  $condition: ModelEnrollmentConditionInput
+) {
+  updateEnrollment(input: $input, condition: $condition) {
+    id
+    studentID
+    courseID
+    student {
+      id
+      name
+      courses {
+        nextToken
+      }
+    }
+    course {
+      id
+      name
+      students {
+        nextToken
+      }
+      videos {
+        nextToken
+      }
+    }
+  }
+}
+mutation DeleteEnrollment(
+  $input: DeleteEnrollmentInput!
+  $condition: ModelEnrollmentConditionInput
+) {
+  deleteEnrollment(input: $input, condition: $condition) {
+    id
+    studentID
+    courseID
+    student {
+      id
+      name
+      courses {
+        nextToken
+      }
+    }
+    course {
+      id
+      name
+      students {
+        nextToken
+      }
+      videos {
+        nextToken
+      }
+    }
+  }
+}
+mutation CreateCourse(
+  $input: CreateCourseInput!
+  $condition: ModelCourseConditionInput
+) {
+  createCourse(input: $input, condition: $condition) {
+    id
+    name
+    students {
+      items {
+        id
+        studentID
+        courseID
+      }
+      nextToken
+    }
+    videos {
+      items {
+        id
+        name
+        url
+      }
+      nextToken
+    }
+  }
+}
+mutation UpdateCourse(
+  $input: UpdateCourseInput!
+  $condition: ModelCourseConditionInput
+) {
+  updateCourse(input: $input, condition: $condition) {
+    id
+    name
+    students {
+      items {
+        id
+        studentID
+        courseID
+      }
+      nextToken
+    }
+    videos {
+      items {
+        id
+        name
+        url
+      }
+      nextToken
+    }
+  }
+}
+mutation DeleteCourse(
+  $input: DeleteCourseInput!
+  $condition: ModelCourseConditionInput
+) {
+  deleteCourse(input: $input, condition: $condition) {
+    id
+    name
+    students {
+      items {
+        id
+        studentID
+        courseID
+      }
+      nextToken
+    }
+    videos {
+      items {
+        id
+        name
+        url
+      }
+      nextToken
+    }
+  }
+}
+mutation CreateVideo(
+  $input: CreateVideoInput!
+  $condition: ModelVideoConditionInput
+) {
+  createVideo(input: $input, condition: $condition) {
+    id
+    name
+    url
+    course {
+      id
+      name
+      students {
+        nextToken
+      }
+      videos {
+        nextToken
+      }
+    }
+  }
+}
+mutation UpdateVideo(
+  $input: UpdateVideoInput!
+  $condition: ModelVideoConditionInput
+) {
+  updateVideo(input: $input, condition: $condition) {
+    id
+    name
+    url
+    course {
+      id
+      name
+      students {
+        nextToken
+      }
+      videos {
+        nextToken
+      }
+    }
+  }
+}
+mutation DeleteVideo(
+  $input: DeleteVideoInput!
+  $condition: ModelVideoConditionInput
+) {
+  deleteVideo(input: $input, condition: $condition) {
+    id
+    name
+    url
+    course {
+      id
+      name
+      students {
+        nextToken
+      }
+      videos {
+        nextToken
+      }
+    }
+  }
+}

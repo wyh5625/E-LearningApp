@@ -1,0 +1,20 @@
+{
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-elearningapp-master-15134-authRole",
+            "UnauthRoleArn": "arn:aws:iam::370654961143:role/amplify-elearningapp-master-15134-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::370654961143:role/amplify-elearningapp-master-15134-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-elearningapp-master-15134-deployment",
+            "UnauthRoleName": "amplify-elearningapp-master-15134-unauthRole",
+            "StackName": "amplify-elearningapp-master-15134",
+            "StackId": "arn:aws:cloudformation:us-east-2:370654961143:stack/amplify-elearningapp-master-15134/06f7fea0-2b2d-11ea-8b6a-025084048856",
+            "AmplifyAppId": "dqj1nr7pzqyit"
+        },
+        "categories": {
+            "auth": {
+                "elearningappfc3d9da3": {}
+            }
+        }
+    }
+}
